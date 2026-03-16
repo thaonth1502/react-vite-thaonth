@@ -17,9 +17,17 @@ const App = () => {
   }
 
   const addNewTodo = (name) => {
-    alert(`call me ${name}`)
+
+    const newTodo = {
+      id: randomIntFromIterval(1, 100000),
+      name: name
+    }
+    setTodoList([...todoList, newTodo])
   }
 
+  const randomIntFromIterval = (min, max) => {
+    return Math.floor(Math.random() * (max - min + 1) + min);
+  }
 
   return (
     <div className="todo-container">

@@ -6,6 +6,7 @@ const TodoNew = (props) => {
     const [valueInput, setValueInput] = useState("rosemary")
 
     const handleClick = () => {
+        addNewTodo(valueInput)
         console.log(">>> check valueInput: ", valueInput)
 
     }
