@@ -13,7 +13,6 @@ const TodoData = (props) => {
                             <button>Delete</button>
                         </div>
                     </div>
-
                 )
             })}
         </div>
