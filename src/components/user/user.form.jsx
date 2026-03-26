@@ -18,7 +18,7 @@ const UserForm = (props) => {
             notification.success(
                 {
                     message: "Information",
-                    description: "Tạo mới user thành công."
+                    description: "User created successfully."
                 }
             )
             resetAndCloseModal()
