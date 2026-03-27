@@ -16,6 +16,19 @@ const UserTable = (props) => {
 
     const columns = [
         {
+            title: 'No.',
+            render: (_, record, index) => {
+                return (
+                    <>
+                        {index + 1}
+                    </>
+
+                )
+            }
+
+        },
+
+        {
             title: 'ID',
             dataIndex: '_id',
             render: (_, record) => {
@@ -57,7 +70,7 @@ const UserTable = (props) => {
                         style={{ cursor: "pointer", color: "orange" }} />
 
                     <Popconfirm
-                        title="Delete User"
+                        title="Confirmation message"
                         description="Are you sure to delete this user?"
                         onConfirm={() => handleDeleteUser(record._id)}
                         okText="Yes"
@@ -79,14 +92,14 @@ const UserTable = (props) => {
         if (res.data) {
             notification.success(
                 {
-                    message: "Delete User",
+                    message: "Notification",
                     description: "User delete successfully."
                 }
             )
             await loadUser();
         } else {
             notification.error({
-                message: "Error delete user",
+                message: "Error message",
                 description: JSON.stringify(res.message)
             })
         }
@@ -111,6 +124,7 @@ const UserTable = (props) => {
                 setDataDetail={setDataDetail}
                 isDetailOpen={isDetailOpen}
                 setIsDetailOpen={setIsDetailOpen}
+                loadUser={loadUser}
             />
         </>
 
