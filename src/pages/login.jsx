@@ -1,6 +1,5 @@
 import { ArrowRightOutlined } from "@ant-design/icons";
 import { Button, Col, Divider, Form, Input, message, notification, Row } from "antd"
-import FormItem from "antd/es/form/FormItem";
 import { Link, useNavigate } from "react-router-dom";
 import { loginAPI } from "../services/api.service";
 import { useContext, useState } from "react";
@@ -69,7 +68,10 @@ const LoginPage = () => {
                                     message: 'Password không được bỏ trống.'
                                 }
                             ]}>
-                            <Input.Password placeholder="Nhập password" />
+                            <Input.Password placeholder="Nhập password" onKeyDown={(event) => {
+                                if (event.key === 'Enter')
+                                    form.submit();
+                            }} />
                         </Form.Item>
                         <Form.Item>
                             <div style={{

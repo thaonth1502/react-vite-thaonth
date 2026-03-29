@@ -24,7 +24,6 @@ const UserPage = () => {
         }
 
     }
-    console.log(">>> check current", current);
 
     // lift up state
     return (
