@@ -17,7 +17,7 @@ const UserForm = (props) => {
         if (res.data) {
             notification.success(
                 {
-                    message: "Information",
+                    message: "Create User",
                     description: "User created successfully."
                 }
             )
@@ -25,7 +25,7 @@ const UserForm = (props) => {
             await loadUser();
         } else {
             notification.error({
-                message: "Error message",
+                message: "Error create user",
                 description: JSON.stringify(res.message)
             })
         }

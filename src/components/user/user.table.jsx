@@ -28,7 +28,6 @@ const UserTable = (props) => {
 
                 )
             }
-
         },
 
         {
@@ -45,7 +44,6 @@ const UserTable = (props) => {
 
                 )
             }
-
         },
         {
             title: 'Full Name',
@@ -122,8 +120,6 @@ const UserTable = (props) => {
                 setPageSize(+pagination.pageSize) // "5"=> 5
             }
         }
-        console.log(">>> check ", { pagination, filter, sorter, extra });
-
     };
 
     return (

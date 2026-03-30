@@ -7,7 +7,6 @@ const RegisterPage = () => {
     const navigate = useNavigate();
 
     const onFinish = async (values) => {
-        console.log('Success:', values);
         //call api
         const res = await registerUserAPI(
             values.fullName,
