@@ -1,11 +1,12 @@
 import { ArrowRightOutlined } from "@ant-design/icons";
-import { Button, Col, Divider, Form, Input, message, notification, Row } from "antd"
+import { message, notification, Button, Col, Divider, Form, Input, Row } from "antd"
 import { Link, useNavigate } from "react-router-dom";
 import { loginAPI } from "../services/api.service";
 import { useContext, useState } from "react";
 import { AuthContext } from "../components/context/auth.context";
 
 const LoginPage = () => {
+
     const [form] = Form.useForm();
     const [loading, setLoading] = useState(false);
     const navigate = useNavigate();
